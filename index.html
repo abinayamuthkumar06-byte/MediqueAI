@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MediQueue AI | Smart Hospital Queue</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="logo">✚</span> MediQueue <b>AI</b></div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#queue">My Queue</a>
+      <a href="#assistant">AI Assistant</a>
+      <a href="#staff">Staff</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div>
+        <p class="eyebrow">SMART HOSPITAL QUEUE MANAGEMENT</p>
+        <h1>Less waiting.<br><span>More care.</span></h1>
+        <p class="hero-text">MediQueue AI helps patients get a digital token, track their queue, and understand their estimated waiting time without standing in a crowded queue.</p>
+        <div class="actions">
+          <button class="primary" onclick="showToken()">Get Digital Token</button>
+          <button class="secondary" onclick="document.querySelector('#queue').scrollIntoView({behavior:'smooth'})">View My Queue</button>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="card-head"><span>Today's Queue</span><span class="live">● LIVE</span></div>
+        <div class="big-number" id="queueCount">24</div>
+        <p>patients currently waiting</p>
+        <div class="mini-grid">
+          <div><b>12 min</b><small>Avg. wait</small></div>
+          <div><b>3</b><small>Doctors available</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="queue">
+      <div class="section-title">
+        <div><p class="eyebrow">PATIENT DASHBOARD</p><h2>Your Queue</h2></div>
+        <span class="status">● Queue active</span>
+      </div>
+      <div class="dashboard">
+        <div class="token-card">
+          <p>Your token</p>
+          <strong id="token">A-104</strong>
+          <span>General Medicine</span>
+        </div>
+        <div class="info-card"><small>Patients ahead</small><b id="ahead">6</b><span>people</span></div>
+        <div class="info-card"><small>Estimated wait</small><b id="wait">18 min</b><span>updated just now</span></div>
+        <div class="info-card"><small>Doctor</small><b>Dr. Priya</b><span>Available</span></div>
+      </div>
+      <div class="progress-card">
+        <div class="progress-text"><b>Queue progress</b><span id="progressLabel">75%</span></div>
+        <div class="progress"><div id="progressBar"></div></div>
+        <p>We'll notify you when your turn is approaching.</p>
+      </div>
+    </section>
+
+    <section class="section light" id="assistant">
+      <div class="section-title">
+        <div><p class="eyebrow">AI SUPPORT</p><h2>MediQueue Assistant</h2></div>
+      </div>
+      <div class="assistant">
+        <div class="chat">
+          <div class="message bot">Hi! I'm MediQueue AI. I can help you understand your queue and hospital visit process. I don't diagnose medical conditions.</div>
+          <div class="message user" id="userMessage">How long do I have to wait?</div>
+          <div class="message bot" id="botMessage">Your current estimated waiting time is 18 minutes. You have 6 patients ahead of you.</div>
+        </div>
+        <div class="quick">
+          <button onclick="askAI('How long do I have to wait?')">⏱ Waiting time</button>
+          <button onclick="askAI('Where is my department?')">📍 Find department</button>
+          <button onclick="askAI('When is my turn?')">🎟 My turn</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="staff">
+      <div class="section-title">
+        <div><p class="eyebrow">STAFF VIEW</p><h2>Queue Control</h2></div>
+        <span class="badge">Demo dashboard</span>
+      </div>
+      <div class="staff-grid">
+        <div class="staff-card"><small>Current patient</small><b id="current">A-098</b><button onclick="nextPatient()">Call Next Patient</button></div>
+        <div class="staff-card"><small>Waiting</small><b id="waiting">24</b><span>patients</span></div>
+        <div class="staff-card"><small>Completed today</small><b id="completed">38</b><span>patients</span></div>
+      </div>
+    </section>
+
+    <section class="section problem">
+      <div>
+        <p class="eyebrow">THE PROBLEM WE SOLVE</p>
+        <h2>No more guessing where you are in the queue.</h2>
+      </div>
+      <p>Patients often spend unnecessary time standing near reception, repeatedly asking staff about their turn. MediQueue AI turns an uncertain waiting experience into a simple, visible digital journey.</p>
+    </section>
+  </main>
+
+  <footer><b>MediQueue AI</b> · Project Better Tomorrow · Prototype for user validation</footer>
+  <script src="script.js"></script>
+</body>
+</html>
