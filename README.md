@@ -1,38 +1,21 @@
 # MediQueue AI
 
-MediQueue AI is a low-to-mid fidelity digital prototype for **Project Better Tomorrow**. It addresses the daily friction of uncertain hospital waiting times by giving patients a digital token, queue position, estimated waiting time and simple AI-assisted guidance.
+A visual, interactive hospital queue-management website prototype for Project Better Tomorrow.
 
-## Problem
-Patients often wait near hospital reception without knowing when their turn will come. This creates uncertainty, repeated questions to staff and unnecessary crowding.
+## Live website
+After enabling GitHub Pages, the website will be available at:
 
-## Prototype features
-- Digital token generation
-- Live queue position
-- Estimated waiting time
-- Doctor availability display
-- Patient-facing AI assistant demo
-- Staff queue control dashboard
-- Responsive web interface
+`https://abinayamuthukumar06-byte.github.io/MediqueAI/`
 
-## How to run
-No installation is required.
+## Run locally
+Open `index.html` in a browser.
 
-1. Download or clone this repository.
-2. Open `index.html` in a browser.
-3. Test **Get Digital Token**, the AI assistant buttons, and **Call Next Patient**.
+## GitHub Pages setup
+1. Open the repository on GitHub.
+2. Go to **Settings → Pages**.
+3. Under **Build and deployment**, choose **Deploy from a branch**.
+4. Select **main** and **/(root)**.
+5. Click **Save**.
+6. Wait a minute or two, then open the Live website link above.
 
-## Project Better Tomorrow
-This prototype is intended for the **Continuation Track (Pathway A)**:
-Empathize + Define were completed in the previous AI Immersion work; this project continues with AI ideation, prototyping and user validation.
-
-## Important note
-This is a prototype, not a real hospital system. The AI assistant is for queue/process guidance and does not diagnose medical conditions or replace healthcare professionals.
-
-## Suggested validation
-Test the prototype with at least 3 real users. Ask:
-- Was the queue position easy to understand?
-- Was the estimated waiting time useful?
-- Was the token-generation process clear?
-- What would you improve?
-
-Record their feedback and the changes made after testing.
+The repository contains the actual website files. The README is only project documentation; GitHub's normal repository page shows the README, while the GitHub Pages URL opens the visual MediQueue AI website.
